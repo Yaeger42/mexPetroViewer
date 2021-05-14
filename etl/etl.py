@@ -7,6 +7,7 @@ from sqlalchemy import create_engine, Table, Column, String, Integer, Float, For
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql.schema import ForeignKey
+
 """
 PWD='123123123'
 USR='test_user';
