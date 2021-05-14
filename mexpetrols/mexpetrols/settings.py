@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'visualizationapp',
 ]
 
 MIDDLEWARE = [
@@ -86,7 +87,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ['mysqlname'],
+        'NAME': os.environ['mysqldb'],
         'USER': os.environ['mysqluser'],
         'PASSWORD': os.environ['mysqlpassword'],
         'HOST': os.environ['mysqlhost'],
