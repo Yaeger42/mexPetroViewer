@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+    db:
+        image: mysql
+        restart: on-failure
+        environment: 
+            MYSQL_ROOT_PASSWORD: samplepassword
+            MYSQL_USER: root
+            MYSQL_DATABASE: week4
+
+        volumes:
+            - /mysql/data:/var/lib/mysql
+        ports: 
+            - 3306:3306

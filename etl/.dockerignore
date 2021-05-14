@@ -1,0 +1,7 @@
+SENER_05_ElaboracionProductosPetroquimicosDerivadosMetano-PMXD2C01.csv
+SENER_05_PrecioPublicoPonderadoProdPetroliferosSeleccionados-PMXE2C05.csv
+SENER_05_ProduccionPetroleoCrudoPorActivosRegion-PMXB1C05.csv
+models.txt
+etl.py
+env
+.vscode

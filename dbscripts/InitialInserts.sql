@@ -1,0 +1,67 @@
+INSERT INTO Types VALUES(1, 'Derivados del metano');
+INSERT INTO Types VALUES(2, 'Derivados del etano');
+INSERT INTO Types VALUES(3, 'Aromaticos y derivados');
+INSERT INTO Types VALUES(4, 'Propileno y derivados');
+INSERT INTO Types VALUES(5, 'Otros');
+INSERT INTO Types VALUES(6, 'Residuo largo ligero');
+
+-- Product types
+INSERT INTO ProductTypes VALUES(1, 'Anh. Carbonico');
+INSERT INTO ProductTypes VALUES(2, 'Amoniaco');
+INSERT INTO ProductTypes VALUES(3, 'Metanol');
+INSERT INTO ProductTypes VALUES(4, 'Etileno');
+INSERT INTO ProductTypes VALUES(5, 'Dicloroetano');
+INSERT INTO ProductTypes VALUES(6, 'Oxido de Etileno');
+INSERT INTO ProductTypes VALUES(7, 'Polietileno B.D.');
+INSERT INTO ProductTypes VALUES(8, 'Polietileno Lineal B.D.');
+INSERT INTO ProductTypes VALUES(9, 'Acetaldehido');
+INSERT INTO ProductTypes VALUES(10, 'Cloruro de Vinilo');
+INSERT INTO ProductTypes VALUES(11, 'Polietileno A.D.');
+INSERT INTO ProductTypes VALUES(12, 'Glicoles');
+INSERT INTO ProductTypes VALUES(13, 'Percloroetileno');
+INSERT INTO ProductTypes VALUES(14, 'Xilenos');
+INSERT INTO ProductTypes VALUES(15, 'Tolueno');
+INSERT INTO ProductTypes VALUES(16, 'Paraxileno');
+INSERT INTO ProductTypes VALUES(17, 'Etilbenceno');
+INSERT INTO ProductTypes VALUES(18, 'Estireno');
+INSERT INTO ProductTypes VALUES(19, 'Aromina 100');
+INSERT INTO ProductTypes VALUES(20, 'Hidrocarburo de Alto Octano');
+INSERT INTO ProductTypes VALUES(21, 'Benceno');
+INSERT INTO ProductTypes VALUES(22, 'Aromaticos Pesados');
+INSERT INTO ProductTypes VALUES(23, 'Ortoxileno');
+INSERT INTO ProductTypes VALUES(24, 'Fluxoil');
+INSERT INTO ProductTypes VALUES(25, 'Cumeno');
+INSERT INTO ProductTypes VALUES(26, 'Gasolina Amorfa');
+INSERT INTO ProductTypes VALUES(27, 'Gasolina Base Octano');
+INSERT INTO ProductTypes VALUES(28, 'Propileno');
+INSERT INTO ProductTypes VALUES(29, 'Acrilonitrilo');
+INSERT INTO ProductTypes VALUES(30, 'Polipropileno');
+INSERT INTO ProductTypes VALUES(31, 'Ac. Cianhidrico');
+INSERT INTO ProductTypes VALUES(32, 'Acetonitrilo');
+INSERT INTO ProductTypes VALUES(33, 'Isopropanol');
+INSERT INTO ProductTypes VALUES(34, 'Others');
+INSERT INTO ProductTypes VALUES(35, 'Residuo largo ligero');
+
+INSERT INTO GasolineType VALUES(1, 'Pemex Magna');
+INSERT INTO GasolineType VALUES(2, 'Pemex Premium');
+INSERT INTO GasolineType VALUES(3, 'Pemex Diesel');
+INSERT INTO GasolineType VALUES(4, 'Combustoleo pesado');
+INSERT INTO GasolineType VALUES(5, 'Diesel Marino Nacional');
+
+INSERT INTO Region VALUES(1, 'Region Marina Noreste');
+INSERT INTO Region VALUES(2, 'Region Marina Suroeste');
+INSERT INTO Region VALUES(3, 'Region Sur');
+INSERT INTO Region VALUES(4, 'Region Norte');
+
+INSERT INTO ActiveCode VALUES (1, 'Activo de Producción Cantarell');
+INSERT INTO ActiveCode VALUES (2, 'Activo de Producción Ku-Maloob-Zaap');
+INSERT INTO ActiveCode VALUES (3, 'Activo de Producción Abkatún-Pol Chuc');
+INSERT INTO ActiveCode VALUES (4, 'Activo de Producción Litoral de Tabasco');
+INSERT INTO ActiveCode VALUES (5, 'Activo de Producción Cinco Presidentes');
+INSERT INTO ActiveCode VALUES (6, 'Activo de Producción Bellota-Jujo');
+INSERT INTO ActiveCode VALUES (7, 'Activo de Producción Macuspana-Muspac');
+INSERT INTO ActiveCode VALUES (8, 'Activo de Producción Samaria-Luna');
+INSERT INTO ActiveCode VALUES (9, 'Activo Integral Burgos');
+INSERT INTO ActiveCode VALUES (10, 'Activo de Produccioón Poza Rica-Altamira');
+INSERT INTO ActiveCode VALUES (11, 'Activo Integral Aceite Terciario del Golfo');
+INSERT INTO ActiveCode VALUES (12, 'Activo Integral Veracruz');

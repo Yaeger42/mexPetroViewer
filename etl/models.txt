@@ -1,0 +1,314 @@
+Models: Petroquimicos derivados del metano
+
+PetroquimicosDelMetano
+id int primary key 
+producTypeId foreign key from ProductType
+typeId int (foreign Key from Types)
+date date
+price float
+
+Example:
+ID      ProductTypeId       typeId      date                price
+1              1               31       January 2005        52.03501664
+
+Type
+Id int primary key 
+Name string
+Current Ones:
+ID   name
+1    Derivados del metano 
+2    Derivados del etano
+3    Aromaticos y Derivados
+4    Propileno y derivados
+5    Otros
+6    Residuo largo ligero
+
+
+ProductTypeId int primary key
+name string
+Current:
+ProductType
+1      Anh. Carbonico
+2      Amoniaco
+3      Metanol
+4       Etileno
+5       Dicloroetano
+6       Oxido de Etileno
+7       Polietileno B.D.
+8       Polietileno Lineal B.D.
+9       Acetaldehido
+10       Cloruro de Vinilo
+11       Polietileno A.D.
+12       Glicoles
+13      Percloroetileno
+14      Xilenos
+15      Tolueno
+16      Paraxileno
+17      Etilbenceno
+18      Estireno
+19      Aromina 100
+20      Hidrocarburo de Alto Octano
+21      Benceno
+22      Aromaticos Pesados
+23      Ortoxileno
+24      Fluxoil
+25      Cumeno
+26      Gasolina Amorfa
+27      Gasolina Base Octano
+28      Propileno
+29      Acrilonitrilo
+30      Polipropileno
+31      Ac. Cianhidrico
+32      Acetonitrilo
+33      Isopropanol
+34      Others
+35      Residuo largo ligero
+
+
+--------------------------------------------
+
+
+Gasoline price per cubic meter 
+Id int primary key
+gasolineId foreign key 
+date date
+price float
+
+gasolineId
+id int primary key
+productName string
+
+1       Pemex Magna
+2       Pemex Premium
+3       Pemex Diesel
+4       Combustoleo pesado
+5       Diesel Marino Nacional
+-----------------------------------------------
+
+
+Petroleo crudo activos por region
+
+TotalTable -- This doesnt make any sense
+
+Activos--Table   
+Id int primary Key
+RegionId Foreign Key id
+ActiveCodeId Foreign key ActiveCodeId
+Date Date
+price float
+
+Region Table
+Id int primary key
+name string
+
+Region 
+1    Region Marina Noreste
+2    Region Marina Suroeste
+3    Region Sur
+4    Region Norte
+
+ActiveCode
+1     Activo de Producción Cantarell
+2     Activo de Producción Ku-Maloob-Zaap
+3     Activo de Producción Abkatún-Pol Chuc
+4     Activo de Producción Litoral de Tabasco
+5     Activo de Producción Cinco Presidentes
+6     Activo de Producción Bellota-Jujo
+7     Activo de Producción Macuspana-Muspac
+8     Activo de Producción Samaria-Luna
+9     Activo Integral Burgos
+10    Activo de Produccioón Poza Rica-Altamira
+11    Activo Integral Aceite Terciario del Golfo
+12    Activo Integral Veracruz
+
+
+
+
+
+
+
+ID      RegionId        ActiveCodeId                        Date        Price
+1           1               None        ene-05       2409...
+------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'2011-08-01'
+'2011-09-01'
+'2011-10-01'
+'2011-11-01'
+'2011-12-01'
+'2012-01-01'
+'2012-02-01'
+'2012-03-01'
+'2012-04-01'
+'2012-05-01'
+'2012-06-01'
+'2012-07-01'
+'2012-08-01'
+'2012-09-01'
+'2012-10-01'
+'2012-11-01'
+'2012-12-01'
+'2013-01-01'
+'2013-02-01'
+'2013-03-01'
+'2013-04-01'
+'2013-05-01'
+'2013-06-01'
+'2013-07-01'
+'2013-08-01'
+'2013-09-01'
+'2013-10-01'
+'2013-11-01'
+'2013-12-01'
+'2014-01-01'
+'2014-02-01'
+'2014-03-01'
+'2014-04-01'
+'2014-05-01'
+'2014-06-01'
+'2014-07-01'
+'2014-08-01'
+'2014-09-01'
+'2014-10-01'
+'2014-11-01'
+'2014-12-01'
+'2015-01-01'
+'2015-02-01'
+'2015-03-01'
+'2015-04-01'
+'2015-05-01'
+'2015-06-01'
+'2015-07-01'
+'2015-08-01'
+'2015-09-01'
+'2015-10-01'
+'2015-11-01'
+'2015-12-01'
+'2016-01-01'
+'2016-02-01'
+'2016-03-01'
+'2016-04-01'
+'2016-05-01'
+'2016-06-01'
+'2016-07-01'
+'2016-08-01'
+'2016-09-01'
+'2016-10-01'
+'2016-11-01'
+'2016-12-01'
+'2017-01-01'
+'2017-02-01'
+'2017-03-01'
+'2017-04-01'
+'2017-05-01'
+'2017-06-01'
+'2017-07-01'
+'2017-08-01'
+'2017-09-01'
+'2017-10-01'
+'2017-11-01'
+'2017-12-01'
+'2018-01-01'
+'2018-02-01'
+'2018-03-01'
+'2018-04-01'
+'2018-05-01'
+'2018-06-01'
+'2018-07-01'
+'2018-08-01'
+'2018-09-01'
+'2018-10-01'
+'2018-11-01'
+'2018-12-01'
+'2019-01-01'
+'2019-02-01'
+'2019-03-01'
+'2019-04-01'
+'2019-05-01'
+'2019-06-01'
+'2019-07-01'
+'2019-08-01'
+'2019-09-01'
+'2019-10-01'
+'2019-11-01'
+'2019-12-01'
+'2020-01-01'
+'2020-02-01'
+'2020-03-01'
+'2020-04-01'
+'2020-05-01'
+'2020-06-01'
+'2020-07-01'
+'2020-08-01'
+'2020-09-01'
+'2020-10-01'
+'2020-11-01'
+'2020-12-01'
