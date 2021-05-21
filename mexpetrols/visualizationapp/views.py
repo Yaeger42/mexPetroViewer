@@ -44,7 +44,7 @@ def gasoline_prices(request):
         g.CreationDate
     FROM 
         GasolinePrices g
-    JOIN GasolineType gt on gt.Id = g.id;
+    JOIN GasolineType gt on g.GasolineTypeId = gt.id;
     """)
     row = list(cursor.fetchall())
     response = []
@@ -57,3 +57,32 @@ def gasoline_prices(request):
         response.append(context)
 
     return JsonResponse(data=response, safe=False) 
+
+def actives_prices(request):
+    from django.db import connection
+    cursor = connection.cursor()
+    cursor.execute("""
+      SELECT
+        act.id,
+        R.Name RegionName,
+        AC.Name ActiveName,
+        act.Price,
+        act.CreationDate
+    FROM 
+        Actives act
+    JOIN ActiveCode AC on AC.Id = act.ActiveCodeId
+    JOIN Region R on R.Id = act.RegionId  
+    """)
+
+    row = list(cursor.fetchall())
+    response = []
+    for id, regionName, activeName, price, dt in row:
+        context = {}
+        context['id'] = id
+        context['regionName'] = regionName
+        context['activeName'] = activeName
+        context['price'] = price
+        context['creationDate'] = dt
+        response.append(context)
+
+    return JsonResponse(data=response, safe=False)
