@@ -3,28 +3,21 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen, urlretrieve
 import pandas
 import numpy as np 
-from sqlalchemy import create_engine, Table, Column, String, Integer, Float, ForeignKey, Date, MetaData
-from sqlalchemy.orm import sessionmaker, scoped_session
+from sqlalchemy import create_engine, MetaData
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.sql.schema import ForeignKey
 
-"""
-PWD='123123123'
-USR='test_user';
-SQLALCHEMY_DATABASE_URI = 'mysql://{}:{}@localhost:3306/test_db'.format(USR, PWD)
-"""
-db_string = 'mysql+pymysql://root:samplepassword@localhost:3306/week4'
+db_string = 'mysql+pymysql://root:samplepassword@127.0.0.1:3306/week4'
 db = create_engine(db_string)
 metadata = MetaData(db)
 base = declarative_base(metadata=metadata)
 if db:
     print("yeih")
 
-update_tables = db.execute('CALL UpdateTables();')
-
+update_tables = db.execute('CALL UpdateTables()')
+print("Tables updated")
    
 """ EXTRACT """
-
+print("Starting scraping")
 def extract():
     urls_list = ['https://datos.gob.mx/busca/dataset/elaboracion-de-productos-petroquimicos-derivados-del-metano',
         'https://datos.gob.mx/busca/dataset/precio-publico-ponderado-de-productos-petroliferos-seleccionados',
@@ -55,7 +48,6 @@ def extract():
 
 file_names_list = extract()
 
-# print(file_names_list)
 
 def generate_dates(header_dates):
     years_dict = {}
@@ -102,6 +94,8 @@ def generate_list(subset:dict, productTypeId: int, typeId: int, elementLocation:
         return "Empty subset"
 
 """ Petrochemicals START"""
+print("Finished scraping")
+print("Uploading data")
 data = pandas.read_csv(file_names_list[0], sep=',', header=None, skiprows=6, nrows=1)
 data.convert_dtypes().dtypes
 
@@ -138,7 +132,6 @@ for i in ethylene:
     db.execute(f"INSERT INTO MethanePetrochemicals VALUES({i['ID']}, {i['Price']}, {i['TypeID']}, {i['ProductTypeID']}, {i['Date']})")
 
 dichloroethane = generate_list(ethylene_derivatives, 5, 2, 7, heads_petro)
-print(dichloroethane)
 for i in dichloroethane:
     db.execute(f"INSERT INTO MethanePetrochemicals VALUES({i['ID']}, {i['Price']}, {i['TypeID']}, {i['ProductTypeID']}, {i['Date']})")
 
@@ -405,4 +398,6 @@ for i in aceite_golfo:
 veracruz = generate_actives_list(north, 4, 12, 18, heads)
 for i in veracruz:
     db.execute(f"INSERT INTO Actives VALUES({i['ID']}, {i['RegionId']}, {i['ActiveCodeId']}, {i['Price']}, {i['Date']})")
+
+print("Finished uploading data")
 """Actives per region END"""

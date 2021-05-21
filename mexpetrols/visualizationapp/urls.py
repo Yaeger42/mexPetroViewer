@@ -1,7 +1,8 @@
-from backend.mexpetrols.visualizationapp.views import display_resume
+from .views import display_resume, gasoline_prices
 from django.urls import path
-from . import views
+from . import views 
 
 urlpatterns = [
-    path('', views.display_resume)
+    path('vis/methane/', views.methane_derivatives),
+    path('vis/gasoline/', views.gasoline_prices),
 ]
