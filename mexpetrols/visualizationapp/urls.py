@@ -1,4 +1,3 @@
-from .views import display_resume, gasoline_prices
 from django.urls import path
 from . import views 
 
